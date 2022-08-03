@@ -1,47 +1,52 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Table from 'react-bootstrap/Table';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import BootstrapTable from "react-bootstrap-table-next";
+import paginationFactory from "react-bootstrap-table2-paginator";
 
 function BootTable() {
-    useEffect(() => {
-        fetchItems();
-    }, []);
+  useEffect(() => {
+    fetchItems();
+  }, []);
 
-    const [items, setItems] = useState([]);
+  const [items, setItems] = useState([]);
 
-    const fetchItems = async () => {
-        const data = await fetch('/table');
-        const items = await data.json();
-        setItems(items);
-    };
+  const fetchItems = async () => {
+    const data = await fetch("/table");
+    const items = await data.json();
+    setItems(items);
+  };
 
-    return (
-        <section>
-            Rental Prices across the U.S.
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Message</th>
-                        <th>Username</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                    items.map(item => (
-                        <tr>
-                            <td>{item.ID}</td>
-                            <td>{item.name}</td>
-                            <td>{item.msg}</td>
-                            <td>{item.username}</td>
-                        </tr>
-                    ))
-                    }
-                </tbody>
-            </Table>
-        </section>
-    );
+  const columns = [
+    {
+      dataField: "userId",
+      text: "Artist ID",
+      sort: true
+    },
+    {
+      dataField: "id",
+      text: "Album Number",
+      sort: true
+    },
+    {
+      dataField: "title",
+      text: "Album Title"
+    }
+  ];
+
+  return (
+    <div className="App">
+      Rental Prices across the U.S.
+      <BootstrapTable
+        keyField="userId"
+        data={items}
+        columns={columns}
+        striped
+        hover
+        condensed
+        pagination={paginationFactory()}
+      />
+    </div>
+  );
 }
 
 export default BootTable;
