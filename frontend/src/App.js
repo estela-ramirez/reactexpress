@@ -1,17 +1,21 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Nav from './components/Nav'
+import Home from './components/Home'
+import Table from './components/Table'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1>Hello World</h1>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/table" element={<Table/>}/>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
