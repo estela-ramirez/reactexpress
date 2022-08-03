@@ -2,7 +2,7 @@
 import './App.css';
 import Nav from './components/Nav'
 import Home from './components/Home'
-import Table from './components/Table'
+import TablePage from './components/BootTable'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/table" element={<Table/>}/>
+          <Route path="/table" element={<TablePage/>}/>
         </Routes>
       </div>
     </Router>
