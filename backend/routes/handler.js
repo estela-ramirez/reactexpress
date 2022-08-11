@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/table', (req, res) => {
+router.get('/api', (req, res) => {
+  console.log("[INFO] Get request recieved at /api");
+  // query it before sending it back!
     const str = [
         {
           "ID": 1,
@@ -55,7 +57,22 @@ router.get('/table', (req, res) => {
     res.end(JSON.stringify(str));
 });
 
-router.post('/addEntry', (req, res) => {
+// cs180 table route
+// router.post("/api", (req, res)=>{ 
+//   var results = queryDB(req.body);
+//   res.json(results);
+// })
+
+// Feature 1 get request for cheapest cities
+router.get("/cheapest",(req,res)=>{
+  console.log("[INFO] Get request recieved at /cheapest");
+  // const results = MostAccStates();
+  // var results = Result.cache.getResult('/mostaccstates');
+  // res.json(results);
+  res.send("success cheapest")
+})
+
+router.post('/addRecord', (req, res) => {
     res.end('NA');
 });
 

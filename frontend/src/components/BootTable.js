@@ -12,7 +12,7 @@ function BootTable() {
   const [items, setItems] = useState([]);
 
   const fetchItems = async () => {
-    const data = await fetch("/table");
+    const data = await fetch("/api");
     const items = await data.json();
     setItems(items);
     console.log(items);

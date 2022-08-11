@@ -1,4 +1,5 @@
 import React from 'react';
+import ReadRemoteFile from './CSVReader2';
 
 function Home() {
     return(
@@ -6,6 +7,9 @@ function Home() {
             <div class="container-fluid">
                 <h1 class="mt-5">Welcome</h1>
                 <p>This is the home page.</p>
+                <div>
+                    {<ReadRemoteFile/>}
+                </div>
             </div>
         </section>
     );
