@@ -32,7 +32,9 @@ def parseCSV(input_file: str) -> None:
             if line_count == 0:
                 header_dict = createHeaderDict(line[3:])
                 headers = sorted(list(header_dict))
-                csv_writer.writerow(line[0:3] + headers)
+                csv_writer.writerow(line[0:2] + ["State"] + line[2:3] + headers)
+                line_count += 1
+            elif line_count == 1:
                 line_count += 1
             else:
                 averages = []
@@ -43,7 +45,10 @@ def parseCSV(input_file: str) -> None:
                     ave = get_average(row, row_length)
                     averages.append(ave)
                     start_index = start_index + row_length
-                csv_writer.writerow(line[0:3] + averages)
+                
+                region_name, state = line[1].split(",")
+                state = state.strip()
+                csv_writer.writerow(line[0:1] + [region_name, state] + line[2:3] + averages)
                 line_count += 1  
 
 parseCSV('ZORI_Metros_AllHomesPlusMultifamily_SSA.csv')
