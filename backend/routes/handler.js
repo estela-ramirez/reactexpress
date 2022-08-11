@@ -1,60 +1,19 @@
 const express = require('express');
 const router = express.Router();
 
+const { generateJsonObj } = require("../data/csvParser.js");
+full_json_data = generateJsonObj();
+console.log(full_json_data);
+
+const {buildDataDict, buildStatesDict} = require("../dbloader/load_data.js");
+data_dict = buildDataDict(full_json_data);
+states_dict = buildStatesDict(data_dict);
+
 router.get('/api', (req, res) => {
   console.log("[INFO] Get request recieved at /api");
   // query it before sending it back!
-    const str = [
-        {
-          "ID": 1,
-          "State": "CA",
-          "CountyName": "Santa Barbara County",
-          "2010": "1000",
-          "2011": "2000",
-          "2012": "3000", 
-          "2013": "4000",
-          "2014": "5000",
-          "2015": "6000",
-          "2016": "7000", 
-          "2017": "8000",
-          "2018": "9000",
-          "2019": "10000",
-          "2020": "11000"
-        },
-        {
-          "ID": 2,
-          "State": "OR",
-          "CountyName": "Santa Oregon County",
-          "2010": "1002",
-          "2011": "2002",
-          "2012": "3002", 
-          "2013": "4002",
-          "2014": "5002",
-          "2015": "6002",
-          "2016": "7002", 
-          "2017": "8002",
-          "2018": "9002",
-          "2019": "10002",
-          "2020": "11002"
-        },
-        {
-          "ID": 3,
-          "State": "TX",
-          "CountyName": "Santa Texas County",
-          "2010": "1003",
-          "2011": "2003",
-          "2012": "3003", 
-          "2013": "4003",
-          "2014": "5003",
-          "2015": "6003",
-          "2016": "7003", 
-          "2017": "8003",
-          "2018": "9003",
-          "2019": "10003",
-          "2020": "11003"
-        },
-      ];
-    res.end(JSON.stringify(str));
+    json =  full_json_data;
+    res.end(JSON.stringify(json));
 });
 
 // cs180 table route

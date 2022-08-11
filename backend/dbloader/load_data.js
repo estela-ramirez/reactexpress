@@ -1,6 +1,6 @@
 // build main data dict, keys are IDs, value = record itself (json obj)
 function buildDataDict(json){
-    var data = {};
+    var data = new Map();
 
     for (let i=0; i< json.length; i++){
         var record = json[i]
@@ -10,8 +10,9 @@ function buildDataDict(json){
     return data
 }
 
+// takes in mpa, where keys are ID's, and value is record
 function buildStatesDict(data_map){
-    var states = {};
+    var states = new Map();
 
     data_map.forEach((value, key) => {
         var state = value.State;
@@ -23,5 +24,6 @@ function buildStatesDict(data_map){
 }
 
 module.exports = {
-    buildDataDict: buildDataDict
+    buildDataDict: buildDataDict,
+    buildStatesDict: buildStatesDict
 }

@@ -2,8 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const routesHandler = require('./routes/handler.js');  // include routes
 
-const { generateJsonObj } = require("./data/csvParser.js");
-generateJsonObj();
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:false}));
