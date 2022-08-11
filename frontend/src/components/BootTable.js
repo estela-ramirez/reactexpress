@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import cellEditFactory from "react-bootstrap-table2-editor";
@@ -20,9 +19,13 @@ function BootTable() {
 
   const columns = [
     {
-      dataField: "ID",
-      text: "Unique ID",
+      dataField: "RegionID",
+      text: "Region ID",
       sort: true,
+    },
+    { 
+      dataField: "RegionName",
+      text: "Region Name",
     },
     {
       dataField: "State",
@@ -41,24 +44,8 @@ function BootTable() {
         // TO DO: make scrollable to right 
         // TO DO: make table a component, don't take up the entire page
     { 
-      dataField: "CountyName",
-      text: "County Name",
-    },
-    {
-        dataField: "2010",
-        text: "2010",
-    },
-    {
-        dataField: "2011",
-        text: "2011",
-    },
-    {
-        dataField: "2012",
-        text: "2012",
-    },
-    {
-        dataField: "2013",
-        text: "2013",
+      dataField: "SizeRank",
+      text: "Population Rank",
     },
     {
         dataField: "2014",
@@ -87,6 +74,10 @@ function BootTable() {
     {
         dataField: "2020",
         text: "2020",
+    },
+    {
+      dataField: "2021",
+      text: "2021",
     },
   ];
 

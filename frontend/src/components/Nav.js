@@ -10,7 +10,10 @@ function Nav() {
             <div id="navMainMenu" class="navbar-collapse collapse">
                 <div class="navbar-nav ml-auto">
                     <Link to='/' className="nav-item nav-link active">Home</Link>
-                    <Link to='/Table' className="nav-item nav-link">Table</Link>
+                    <Link to='/table' className="nav-item nav-link">Table</Link>
+                    <Link to='/states' className="nav-item nav-link">States Map</Link>
+                    <Link to='/bars' className="nav-item nav-link">Bar Graph</Link>
+                    <Link to='/line' className="nav-item nav-link">Line Graph</Link>
                 </div>
             </div>
         </nav>

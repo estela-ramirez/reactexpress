@@ -1,5 +1,5 @@
 import React from 'react';
-import ReadRemoteFile from './CSVReader2';
+import ReadRemoteFile from '../components/CSVReader2';
 
 function Home() {
     return(
