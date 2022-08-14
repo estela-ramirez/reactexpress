@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
 import Nav from './components/Nav'
-import {HomePage, StatesChartPage, BarChartsPage, LineChartPage} from './Pages'
-import TablePage from './components/BootTable'
+import {HomePage, TablePage, StatesChartPage, BarChartsPage, LineChartPage} from './Pages'
+//import TablePage from './components/BootTable'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
