@@ -1,5 +1,5 @@
 import React from 'react';
-//import StatesMap from '../Charts/statesMap';
+import StatesMap from '../Charts/statesChart';
 
 function StatesChart() {
     return(
@@ -7,7 +7,7 @@ function StatesChart() {
             <div class="container-fluid">
                 <p>This is the States Chart page.</p>
             </div>
-            {/* {<StatesMap/>} */}
+            {<StatesMap/>}
         </section>
     );
 }
