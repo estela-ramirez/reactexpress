@@ -3,11 +3,11 @@ const router = express.Router();
 
 const { generateJsonObj } = require("../data/csvParser.js");
 full_json_data = generateJsonObj();
-console.log(full_json_data);
+
 
 const {buildDataDict, buildStatesDict} = require("../dbloader/load_data.js");
-data_dict = buildDataDict(full_json_data);
-states_dict = buildStatesDict(data_dict);
+const data_dict = buildDataDict(full_json_data);
+const states_dict = buildStatesDict(data_dict);
 
 router.get('/api', (req, res) => {
   console.log("[INFO] Get request recieved at /api");
@@ -16,20 +16,14 @@ router.get('/api', (req, res) => {
     res.end(JSON.stringify(json));
 });
 
-// cs180 table route
-// router.post("/api", (req, res)=>{ 
-//   var results = queryDB(req.body);
-//   res.json(results);
-// })
-
-// Feature 1 get request for cheapest cities
-router.get("/cheapest",(req,res)=>{
-  console.log("[INFO] Get request recieved at /cheapest");
-  // const results = MostAccStates();
-  // var results = Result.cache.getResult('/mostaccstates');
+//get request for cheapest states
+router.get("/states",(req,res)=>{
+  console.log("[INFO] Get request recieved at /states");
+  var results = states_dict;
   // res.json(results);
-  res.send("success cheapest")
+  res.end(JSON.stringify(results));
 })
+
 
 router.post('/addRecord', (req, res) => {
     res.end('NA');

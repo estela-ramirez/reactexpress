@@ -39,35 +39,35 @@ function BootTable() {
       sort: true,
     },
     {
-      dataField: "2014",
+      dataField: "year2014",
       text: "2014",
     },
     {
-      dataField: "2015",
+      dataField: "year2015",
       text: "2015",
     },
     {
-      dataField: "2016",
+      dataField: "year2016",
       text: "2016",
     },
     {
-      dataField: "2017",
+      dataField: "year2017",
       text: "2017",
     },
     {
-      dataField: "2018",
+      dataField: "year2018",
       text: "2018",
     },
     {
-      dataField: "2019",
+      dataField: "year2019",
       text: "2019",
     },
     {
-      dataField: "2020",
+      dataField: "year2020",
       text: "2020",
     },
     {
-      dataField: "2021",
+      dataField: "year2021",
       text: "2021",
     },
   ];

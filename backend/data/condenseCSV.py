@@ -4,6 +4,7 @@ def createHeaderDict(header: list) -> dict:
     header_count = dict()
     for col in header:
         prefix = col[0:4]
+        prefix = "year" + prefix
         if prefix in header_count:
             header_count[prefix] += 1
         else:
