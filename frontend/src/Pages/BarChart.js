@@ -1,13 +1,14 @@
 import React from 'react';
+import BarGraph from '../Charts/barChart';
 
-function BarCharts() {
+function BarChart() {
     return(
         <section>
             <div class="container-fluid">
-                <p>This is the Bar Graphs page.</p>
             </div>
+            {<BarGraph/>}
         </section>
     );
 }
 
-export default BarCharts;
+export default BarChart;
