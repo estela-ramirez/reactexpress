@@ -25,7 +25,28 @@ function buildStatesDict(data_map){
     return states
 }
 
+
+function buildStatesPriceDict(main_dict, states_data_map){
+    var states_prices = new Map();
+
+    Object.keys(states_data_map).map(key => {
+        var total = 0;
+        var records = states_data_map[key];
+        var num_records = records.length;
+        for (let i = 0; i < num_records; i++){
+            record = records[i];
+            price = main_dict[record].year2021;
+            total += price;
+        }
+        states_prices[key] = Math.round(total/num_records);
+        
+    });
+
+    return states_prices
+}
+
 module.exports = {
     buildDataDict: buildDataDict,
-    buildStatesDict: buildStatesDict
+    buildStatesDict: buildStatesDict,
+    buildStatesPriceDict: buildStatesPriceDict
 }

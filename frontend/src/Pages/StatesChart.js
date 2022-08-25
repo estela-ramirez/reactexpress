@@ -5,7 +5,7 @@ function StatesChart() {
     return(
         <section>
             <div class="container-fluid">
-                <p>This is the States Chart page.</p>
+                {/* <p>This is the States Chart page.</p> */}
             </div>
             {<StatesMap/>}
         </section>
