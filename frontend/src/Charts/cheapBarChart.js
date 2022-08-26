@@ -48,7 +48,7 @@ function CheapBarGraph() {
         layout = {
             {
                 autosize: true,
-                title: 'Top 10 cheapet cities in 2021 ',
+                title: 'Top 10 Cheapet cities in 2021 ',
                 responsive: true,
             }
         } 

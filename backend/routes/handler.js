@@ -37,11 +37,18 @@ router.get("/cheap-cities",(req,res)=>{
 
 //get request for most expsensive cities
 router.get("/expensive-cities",(req,res)=>{
-  console.log("[INFO] Get request recieved at /cheap-cities");
+  console.log("[INFO] Get request recieved at /expensive-cities");
   var results = region_prices;
   results.sort(function(a,b){return b[1] - a[1];});
   top_ten = results.slice(0,10);
   res.end(JSON.stringify(top_ten));
+})
+
+//get request for most expsensive cities
+router.get("/line",(req,res)=>{
+  console.log("[INFO] Get request recieved at /line");
+  var results = {"New York": [100, 200, 300, 400, 500, 600, 700, 800], "San Diego": [300, 500, 800, 900, 1000, 1100, 700, 800]};
+  res.end(JSON.stringify(results));
 })
 
 router.post('/addRecord', (req, res) => {
