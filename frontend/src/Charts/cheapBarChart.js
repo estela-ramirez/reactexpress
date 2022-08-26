@@ -4,29 +4,43 @@ import React, {
 } from 'react'
 import Plot from 'react-plotly.js';
 
-function BarGraph() {
+
+function CheapBarGraph() {
     const [list, setList] = useState([]);
   
-    
+
     useEffect(() => {
         fetch('http://localhost:4000/cheap-cities')
             .then(response => response.json())
             .then((json) => {
-                console.log(json); //
-                console.log("---json");
                 setList(json);
             });
     }, [])
 
-    return ( <
-        Plot data = {
+    function getCityNames(){
+        return list.map(data=>data[0]);
+    }
+
+    function getCityPrices(){
+        return list.map(data=>data[1]);
+    }
+
+    return ( 
+        <div >
+            <
+        Plot 
+
+        style={{width: '90%', height: '90%'}}
+        config={{responsive: true}}
+
+        data = {
             [
                 {
                     type: 'bar',
-                    x: ['Los Angeles', 'San Atonio', 'Pheonix'],
-                    y: [2, 5, 3],
+                    x: getCityNames(),
+                    y: getCityPrices(),
                     marker: {
-                        color: 'rgb(158,202,225)',
+                        color: 'rgb(135,206,235)',
                     }
                 },
             ]
@@ -37,10 +51,13 @@ function BarGraph() {
                 title: 'Top 10 cheapet cities in 2021 ',
                 responsive: true,
             }
-        }
+        } 
+
         />
+        </div>
+        
 
     );
 }
 
-export default BarGraph;
+export default CheapBarGraph;

@@ -45,8 +45,18 @@ function buildStatesPriceDict(main_dict, states_data_map){
     return states_prices
 }
 
+function buildRegionPriceList(main_dict){
+    var regions = [];
+
+    Object.keys(main_dict).map(key => {
+        regions.push([main_dict[key].RegionName,main_dict[key].year2021]); 
+    });
+    return regions
+}
+
 module.exports = {
     buildDataDict: buildDataDict,
     buildStatesDict: buildStatesDict,
-    buildStatesPriceDict: buildStatesPriceDict
+    buildStatesPriceDict: buildStatesPriceDict,
+    buildRegionPriceList: buildRegionPriceList
 }

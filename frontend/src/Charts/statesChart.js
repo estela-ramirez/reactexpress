@@ -18,6 +18,8 @@ function StatesMap() {
     return (
         <>
             <Plot 
+                style={{width: '100%', height: '100%'}}
+                config={{responsive: true}}
                 data= {[{
                     type: 'choropleth',
                     locationmode: 'USA-states',
@@ -31,9 +33,11 @@ function StatesMap() {
                     ],
                 }]}
                 layout= { {
+                    autosize: true,
                     title: '2021 Average Rental Prices By State',
-                    width: window.outerWidth,
-                    height: window.outerHeight,
+                    // width: window.outerWidth,
+                    // height: window.outerHeight,
+                    responsive: true,    
                     geo:{
                         scope: 'usa',
                         countrycolor: 'rgb(255, 255, 255)',
