@@ -4,7 +4,7 @@ import StatesMap from '../Charts/statesChart';
 function StatesChart() {
     return(
         <section>
-            <div class="container-fluid">
+            <div class="mt-5">
             {<StatesMap/>}
             </div>
             

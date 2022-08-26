@@ -42,7 +42,7 @@ function StatesMap() {
                         r: 20,
                         b: 50,
                         t: 50,
-                        pad: 10
+                        pad: 50
                       },
                     responsive: true,    
                     geo:{
