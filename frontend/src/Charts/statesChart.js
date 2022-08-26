@@ -37,6 +37,13 @@ function StatesMap() {
                     title: '2021 Average Rental Prices By State',
                     // width: window.outerWidth,
                     // height: window.outerHeight,
+                    margin: {
+                        l: 50,
+                        r: 20,
+                        b: 50,
+                        t: 50,
+                        pad: 10
+                      },
                     responsive: true,    
                     geo:{
                         scope: 'usa',
