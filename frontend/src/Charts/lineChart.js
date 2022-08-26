@@ -8,7 +8,7 @@ function LineGraph() {
     const [list, setList] = useState([]);
   
     useEffect(() => {
-        fetch('http://localhost:4000/line')
+        fetch('http://localhost:4000/line')   // TO DO: get request for line name, data of selected cities
             .then(response => response.json())
             .then((json) => {
                 setList(json);
@@ -84,7 +84,11 @@ function LineGraph() {
     };
 
 
-    return <Chart type = "line" height = "550"
+    return <div style={{ display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'}}
+     >
+        <Chart type = "line" style={{width: '60%', height: '50%'}}
       
     series = {
         series
@@ -92,7 +96,8 @@ function LineGraph() {
     options = {
         options
     }
-    />;
+    />
+    </div>;
 }
 
 export default LineGraph;

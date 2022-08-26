@@ -51,6 +51,13 @@ router.get("/line",(req,res)=>{
   res.end(JSON.stringify(results));
 })
 
+//get request for most expsensive cities
+router.get("/city-names",(req,res)=>{
+  console.log("[INFO] Get request recieved at /city-names");
+  var results = region_prices;
+  res.end(JSON.stringify(results));
+})
+
 router.post('/addRecord', (req, res) => {
     res.end('NA');
 });
