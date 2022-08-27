@@ -51,15 +51,20 @@ router.get("/line",(req,res)=>{
   res.end(JSON.stringify(results));
 })
 
-//get request for most expsensive cities
+//get request for city names for line graph options
 router.get("/city-names",(req,res)=>{
   console.log("[INFO] Get request recieved at /city-names");
-  var results = region_prices;
+  var temp = region_prices;
+  var results = [];
+  for (let i = 0; i< temp.length; i++){
+    results.push(temp[i][0]);
+  }
   res.end(JSON.stringify(results));
 })
 
-router.post('/addRecord', (req, res) => {
-    res.end('NA');
+router.post("/selected-regions", (req, res)=>{
+  console.log("[INFO] /selected-regions request receive:", req.body);
+  res.send(["response"]);
 });
 
 module.exports = router;

@@ -1,52 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import Select from 'react-select';
+import React, { useState, useEffect } from "react";
+import Select from "react-select";
 
 function DropDown() {
-    const [selectedRegions, setselectedRegions] = useState("");
+  const [regionNames, setRegionNames] = useState([]);
+  const [selectedRegions, setSelectedRegions] = useState([]);
 
-    // useEffect(() => {
-    //     fetch('http://localhost:4000/city-names')
-    //         .then(response => response.json())
-    //         .then((json) => {
-    //             setselectedRegions(json);
-    //         });
-    // }, [])
+  useEffect(() => {
+    fetch("http://localhost:4000/city-names")
+      .then((response) => response.json())
+      .then((json) => {
+        setRegionNames(json);
 
-    // TO DO: generate this list dynamically from dataset 
-    const regions = [
-        {
-            value: 1,
-            label: "New York"
-        },
-        {
-            value: 2,
-            label: "San Diego"
-        },
-        {
-            value: 3,
-            label: "San Jose"
+        let temp = [];
+        let count = 1;
+        for (let i = 0; i < json.length; i++){
+            temp.push({ value: count++, label: json[i] });
         }
-    ];
+        // console.log("temp = ", temp);
+        setRegionNames(temp);
+      });
+  }, []);
 
-    var productArr = [];
-    productArr.push({ ide: 1, name: "prudct-name" });
-    console.log("prduct-arr", productArr);
 
-    var handleOnChange = (e) => {
-        setselectedRegions(Array.isArray(e)?e.map(x=>x.label):[]);
-    };
+  var handleOnChange = (e) => {
+    setSelectedRegions(Array.isArray(e) ? e.map((x) => x.label) : []);
 
-    return (
-        <div className="container mt-3">
-            <div className="mt-4" style={{maxWidth: '40%'}}>
-                <Select isMulti options={regions} onChange={handleOnChange} ></Select>
-                <div>
-                    <h4>{selectedRegions}</h4>
-                </div>
-                
-            </div>
+  };
+
+  return (
+    <div className="container mt-3">
+      <div className="mt-4" style={{ maxWidth: "40%" }}>
+        <Select isMulti options={regionNames} onChange={handleOnChange} isOptionDisabled={() => selectedRegions.length >= 3}></Select>
+        <div>
+          <h4>{selectedRegions}</h4>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default DropDown;
