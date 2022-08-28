@@ -4,27 +4,18 @@ import React, {
 } from "react";
 import Chart from "react-apexcharts";
 
-function LineGraph() {
-    const [list, setList] = useState([]);
+function LineGraph(props) {
+    // const [data, setData] = useState([]);
   
-    useEffect(() => {
-        fetch('http://localhost:4000/line')   // TO DO: get request for line name, data of selected cities
-            .then(response => response.json())
-            .then((json) => {
-                setList(json);
-            });
-    }, [])
+    // useEffect(() => {
+    //     fetch('http://localhost:4000/line')   
+    //         .then(response => response.json())
+    //         .then((json) => {
+    //             console.log("json -", json);
+    //             setData(json);
+    //         });
+    // }, [])
 
-    const series = [{
-            name: "city1", 
-            data: [19, 22, 20, 26],
-        },
-        //additional data in this array..
-        {
-            name: "city2",
-            data: [103, 105, 98, 83],
-        },
-    ];
 
     const options = {
         xaxis: {
@@ -91,7 +82,7 @@ function LineGraph() {
         <Chart type = "line" style={{width: '60%', height: '50%'}}
       
     series = {
-        series
+        props.data
     }
     options = {
         options

@@ -6,9 +6,9 @@ function LineChart() {
     return(
         <section>
             {<DropDown/>}
-            <div class="mt-5">
+            {/* <div class="mt-5">
                 {<LineGraph/>}
-            </div>
+            </div> */}
         </section>
     );
 }
