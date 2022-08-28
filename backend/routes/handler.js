@@ -17,7 +17,7 @@ const data_dict = buildDataDict(full_json_data);
 const states_dict = buildStatesDict(data_dict);
 const states_price_dict = buildStatesPriceDict(data_dict, states_dict);
 const region_prices = buildRegionPriceList(data_dict);
-const data = buildDataMap(full_json_data);
+const data_map = buildDataMap(full_json_data);
 
 router.get("/api", (req, res) => {
   console.log("[INFO] Get request recieved at /api");
@@ -29,7 +29,7 @@ router.get("/api", (req, res) => {
 router.get("/data-map", (req, res) => {
   console.log("[INFO] Get request recieved at /map");
   json = full_json_data;
-  res.end(JSON.stringify(data));
+  res.end(JSON.stringify(data_map));
 });
 
 //get request for cheapest states
@@ -62,24 +62,12 @@ router.get("/expensive-cities", (req, res) => {
   res.end(JSON.stringify(top_ten));
 });
 
-//get request for cities to plot on line graph
-router.get("/line", (req, res) => {
-  // return as [{name:, data:}]
-  console.log("[INFO] Get request recieved at /line");
-  var results = [
-    { name: "city111", data: [19, 22, 20, 26] },
-    { name: "city222", data: [103, 105, 98, 83] },
-  ];
- 
-  res.end(JSON.stringify(results));
-});
-
 //get request for city names for dropdown, return as [{value: RegionID, label: Region}]
 router.get("/cities", (req, res) => {
   console.log("[INFO] Get request recieved at /cities");
 
   var city_names = [];
-  Object.entries(data).map(([key, value]) => {
+  Object.entries(data_map).map(([key, value]) => {
     city_names.push({ value: key, label: value.RegionName });
   });
 
@@ -93,7 +81,7 @@ router.post("/display", (req, res) => {
   var results = [];
   for (let i = 0; i < req.body.length; i++) {
     var ID = req.body[i];
-    var record = data[ID];
+    var record = data_map[ID];
     var prices = [
       record.year2014,
       record.year2015,
@@ -104,10 +92,9 @@ router.post("/display", (req, res) => {
       record.year2020,
       record.year2021,
     ];
-    results.push({ name: data[ID].RegionName, data: prices });
+    results.push({ name: data_map[ID].RegionName, data: prices });
   }
 
-  console.log("here are results", results);
   res.send(results);
 });
 

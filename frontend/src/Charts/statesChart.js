@@ -19,7 +19,7 @@ function StatesMap() {
         <>
             <Plot 
                 style={{width: '100%', height: '100%'}}
-                config={{responsive: true}}
+                config={{responsive: true, displayModeBar: false}}
                 data= {[{
                     type: 'choropleth',
                     locationmode: 'USA-states',

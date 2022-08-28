@@ -30,7 +30,7 @@ function ExpensiveBarGraph() {
         Plot 
         
         style={{width: '90%', height: '90%'}}
-        config={{responsive: true}}
+        config={{responsive: true, displayModeBar: false}}
 
         data = {
             [
