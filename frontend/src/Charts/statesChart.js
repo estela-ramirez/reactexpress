@@ -9,7 +9,6 @@ function StatesMap() {
         .then(response => response.json())
         .then((json) => { 
             setMyMap(json);
-            console.log(myMap);
         });
     }, [])
 

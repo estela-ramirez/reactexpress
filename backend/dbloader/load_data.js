@@ -1,3 +1,5 @@
+console.log = function () {};
+
 // build main data dict, keys are IDs, value = record itself (json obj)
 function buildDataDict(json) {
   var data = new Map();
@@ -15,7 +17,7 @@ function buildDataMap(json) {
 
   for (let i = 0; i < json.length; i++) {
     var record = json[i];
-    console.log(record);
+    // console.log(record);
     data_map[record.RegionID] = record;
   }
 

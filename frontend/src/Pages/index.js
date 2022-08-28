@@ -1,13 +1,13 @@
 import Home from './Home';
 import Table from './Table';
 import StatesChart from './StatesChart';
-import LineChart from './LineChart';
+import DropDownLineChart from './DropDownLineChart';
 import BarCharts from './BarCharts';
 
 export {
     Home as HomePage,
     Table as TablePage,
     StatesChart as StatesChartPage,
-    LineChart as LineChartPage,
+    DropDownLineChart as DropDownLineChartPage,
     BarCharts as BarChartsPage,
 }

@@ -17,7 +17,6 @@ function BootTable() {
     const data = await fetch("/api");
     const items = await data.json();
     setItems(items);
-    console.log("items = ", items);
 
   };
 

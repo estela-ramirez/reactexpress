@@ -1,26 +1,13 @@
-import React, {
-    useEffect,
-    useState
-} from 'react'
+import React from 'react'
 import Plot from 'react-plotly.js';
 
-function ExpensiveBarGraph() {
-    const [list, setList] = useState([]);
-  
+function BarGraph(props) {
 
-    useEffect(() => {
-        fetch('http://localhost:4000/expensive-cities')
-            .then(response => response.json())
-            .then((json) => {
-                setList(json);
-            });
-    }, [])
-
-    function getCityNames(){
+    function getCityNames(list){
         return list.map(data=>data[0]);
     }
 
-    function getCityPrices(){
+    function getCityPrices(list){
         return list.map(data=>data[1]);
     }
 
@@ -36,10 +23,10 @@ function ExpensiveBarGraph() {
             [
                 {
                     type: 'bar',
-                    x: getCityNames(),
-                    y: getCityPrices(),
+                    x: getCityNames(props.data.data),
+                    y: getCityPrices(props.data.data),
                     marker: {
-                        color: 'rgb(250,128,114)',
+                        color: props.data.color,
                     }
                 },
             ]
@@ -47,7 +34,7 @@ function ExpensiveBarGraph() {
         layout = {
             {
                 autosize: true,
-                title: 'Top 10 Expensive cities in 2021 ',
+                title: props.data.title,
                 responsive: true,
             }
         }
@@ -58,4 +45,4 @@ function ExpensiveBarGraph() {
     );
 }
 
-export default ExpensiveBarGraph;
+export default BarGraph;

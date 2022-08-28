@@ -4,6 +4,8 @@ const router = express.Router();
 const { generateJsonObj } = require("../data/csvParser.js");
 full_json_data = generateJsonObj();
 
+console.log = function () {};
+
 const {
   buildDataDict,
   buildStatesDict,
