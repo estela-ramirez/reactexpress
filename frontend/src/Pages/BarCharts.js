@@ -3,6 +3,9 @@ import React, {
     useState
 } from 'react'
 import BarGraph from '../Charts/BarChart';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import './barCharts.css';
 
 function BarCharts() {
@@ -24,12 +27,12 @@ function BarCharts() {
 
 
     return(
-        <section>
-            <div className="flex-container">
-                <div className="flex-child">{<BarGraph data={cheapData} />}</div>
-                <div className="flex-child">{<BarGraph data={expensiveData} />}</div>
-            </div>
-        </section>
+        <Container fluid>
+            <Row className="align-items-center">
+                <Col xs={12} md={6}>{<BarGraph data={cheapData} />}</Col>
+                <Col xs={12} md={6}>{<BarGraph data={expensiveData} />}</Col>
+            </Row>
+        </Container>
     );
 }
 
