@@ -32,20 +32,14 @@
 <!-- TechStack -->
 ### :space_invader: Tech Stack
 
-<details>
-  <summary>Client</summary>
-  * [React.js]("https://reactjs.org/")
-</details>
+<summary>Client</summary>
+* [React.js]("https://reactjs.org/")
 
-<details>
-  <summary>Server</summary>
-  * [Express.js]("https://expressjs.com/")
-</details>
+<summary>Server</summary>
+* [Express.js]("https://expressjs.com/")
 
-<details>
 <summary>DevOps</summary>
-   * [Docker]("https://www.docker.com/)")
-</details>
+* [Docker]("https://www.docker.com/)")
 
 <!-- Analytics -->
 ### :dart: Analytics
