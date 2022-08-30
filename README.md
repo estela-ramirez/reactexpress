@@ -22,10 +22,13 @@
 * Link to project 
 
 <div align="center">
- <img src="screenshots/filtertable.jpg" alt="" />
- <img src="screenshots/map.jpg" alt="" />
- <img src="screenshots/barcharts.jpg" alt="" />
- <img src="screenshots/linegraph.jpg" alt="" />
+ <img src="screenshots/filtertable.jpg" alt="" width="425"/>
+ <img src="screenshots/map.jpg" alt="" width="425"/>
+</div>
+
+<div align="center">
+ <img src="screenshots/barcharts.jpg" alt="" width="300"/>
+ <img src="screenshots/linegraph.jpg" alt="" width="300"/>
 </div>
 
 
