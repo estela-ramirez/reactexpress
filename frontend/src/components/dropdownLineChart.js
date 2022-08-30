@@ -45,7 +45,7 @@ function DropdownLineChart() {
           isOptionDisabled={() => selectedRegions.length >= 3}
         ></Select>
       </div>
-      <div class="mt-5">{<LineGraph data={displayData} />}</div>
+      <div className="mt-5">{<LineGraph data={displayData} />}</div>
     </div>
   );
 }

@@ -20,6 +20,7 @@ function BootTable() {
 
   };
 
+  
   const columns = [
     {
       dataField: "RegionID",
@@ -76,7 +77,7 @@ function BootTable() {
     <div className="App">
       <ToolkitProvider
         bootstrap4
-        keyField="name"
+        keyField="RegionID"
         data={items}
         columns={columns}
         search
@@ -88,11 +89,11 @@ function BootTable() {
               style={{ width: "400px", height: "40px" }}
             />
             <BootstrapTable 
-              keyField="id"
+              keyField="RegionID"
               data={items}
               columns={columns}
               {...props.baseProps}  // needed to display search results
-              noDataIndication="There macthing data"
+              noDataIndication="No macthing data"
               striped
               hover
               condensed

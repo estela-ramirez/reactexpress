@@ -3,15 +3,26 @@ import React from "react";
 function Home() {
   return (
     <section>
-      <div  className="container-fluid" style={{width: "80%", padding: '50px'}}>
-        <h3 className="mt-5" >Rental Prices across the U.S.</h3>
-        <div style={{  display: 'flex', alignItems: 'center',
-        justifyContent: 'center', }}>
-            <p className="mt-2" style={{width: "80%"}}>
-            Vizualize average rental prices across the U.S. from 2014-2021. The
-            rental prices are the average for various sized homes (1 bed, 2 bed,
-            etc). The dataset used does not include data for all states and all cities/regions.
-            </p>
+      <div
+        className="container-fluid"
+        style={{ width: "80%", padding: "50px" }}
+      >
+        <h3 className="mt-5">Rental Prices across the U.S.</h3>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <p className="mt-2" style={{ width: "75%" }}>
+            Vizualize median rental prices across the 100 most populated cities
+            + 5 smaller cities in the U.S. The rental price is called (ZORI): A
+            smoothed measure of the typical observed market rate rent across a
+            given region. The ZORI index is calculated using all listed homes
+            and apartments in a given region. The data spans from January 2014 -
+            June 2021.
+          </p>
         </div>
       </div>
     </section>
