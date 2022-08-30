@@ -33,6 +33,7 @@
 ### :space_invader: Tech Stack
 
 <summary>Client</summary>
+* [Run Locally](#running-run-locally)
 * [React.js]("https://reactjs.org/")
 
 <summary>Server</summary>
