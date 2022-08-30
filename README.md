@@ -27,8 +27,8 @@
 </div>
 
 <div align="center">
- <img src="screenshots/bar.jpg" alt="" width="350"/>
- <img src="screenshots/line.jpg" alt="" width="350"/>
+ <img src="screenshots/bar.jpg" alt="" width="400"/>
+ <img src="screenshots/line.jpg" alt="" width="400"/>
 </div>
 
 
