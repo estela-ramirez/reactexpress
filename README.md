@@ -12,9 +12,9 @@
 
 <!-- About the Project -->
 ## :star2: About the Project
-<p>This project started off as a way for me to compare rent prices across cities. I also wanted to visualize the change in rent prices across the years. </p>
+<p>This project started off as a way to compare rent prices across cities. I also wanted to visualize the change in rent prices across the years. </p>
 
--[Dataset](https://www.kaggle.com/datasets/haydenvenable/zillow-observed-rent-index-jan-2014-june-2021)
+* [Dataset](https://www.kaggle.com/datasets/haydenvenable/zillow-observed-rent-index-jan-2014-june-2021)
 
 <!-- Screenshots -->
 ### :camera: Screenshots
@@ -22,6 +22,10 @@
 * Link to project 
 
 <div align="center">
+ <img src="frontend/screenshots/filtertable.jpg" alt="Table" />
+ <img src="frontend/screenshots/map.jpg" alt="Map" />
+ <img src="frontend/screenshots/barcharts.jpg" alt="BarCharts" />
+ <img src="frontend/screenshots/linegraph.jpg" alt="LineGraph" />
 </div>
 
 
@@ -30,23 +34,17 @@
 
 <details>
   <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
+  * [React.js]("https://reactjs.org/")
 </details>
 
 <details>
   <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
+  * [Express.js]("https://expressjs.com/")
 </details>
 
 <details>
 <summary>DevOps</summary>
-  <ul>
-    <li><a href="https://www.docker.com/">Docker</a></li>
-  </ul>
+   * [Docker]("https://www.docker.com/)")
 </details>
 
 <!-- Analytics -->
@@ -61,7 +59,7 @@
 
 <!-- Prerequisites -->
 ### :bangbang: Prerequisites
-- [nodejs] (https://nodejs.org/en/)
+- [nodejs](https://nodejs.org/en/)
 
 <!-- Run Locally -->
 ### :running: Run Locally
