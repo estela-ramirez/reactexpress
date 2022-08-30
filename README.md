@@ -3,11 +3,11 @@
 - [About the Project](#star2-about-the-project)
   * [Screenshots](#camera-screenshots)
   * [Tech Stack](#space_invader-tech-stack)
-  * [Analytics](#chart-analytics)
+  * [Analytics](#chart_with_upwards_trend-analytics)
 - [Getting Started](#toolbox-getting-started)
   * [Prerequisites](#bangbang-prerequisites)
   * [Run Locally](#running-run-locally)
-- [Acknowledgements](#gem-acknowledgements)
+- [Acknowledgements](#raised_hands-acknowledgements)
 
 
 <!-- About the Project -->
@@ -54,7 +54,7 @@
 </details>
 
 <!-- Analytics -->
-### :dart: Analytics
+### :chart_with_upwards_trend: Analytics
 - Filterable Table 
 - Chlorpleth Map
 - Bar Chart
@@ -99,7 +99,7 @@ Start the server
 ```
 
 <!-- Acknowledgments -->
-## :gem: Acknowledgements
+## :raised_hands: Acknowledgements
  - [Bootstrap Table](https://react-bootstrap-table.github.io/react-bootstrap-table2/docs/about.html)
  - [Bar Chart Library](https://plotly.com/javascript/bar-charts/)
  - [Chloropleth Map Library](https://plotly.com/javascript/choropleth-maps/)
