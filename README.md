@@ -32,15 +32,26 @@
 <!-- TechStack -->
 ### :space_invader: Tech Stack
 
-<summary>Client</summary>
-* [Run Locally](#running-run-locally)
-* [React.js]("https://reactjs.org/")
+<details>
+  <summary>Client</summary>
+   <ul>
+     <li><a href="https://reactjs.org/">React.js</a></li>
+   </ul>
+</details>
 
-<summary>Server</summary>
-* [Express.js]("https://expressjs.com/")
+<details>
+   <summary>Server</summary>
+   <ul>
+     <li><a href="https://expressjs.com/">Express.js</a></li>
+   </ul>
+</details>
 
-<summary>DevOps</summary>
-* [Docker]("https://www.docker.com/)")
+<details>
+ <summary>DevOps</summary>
+   <ul>
+     <li><a href="https://www.docker.com/">Docker</a></li>
+   </ul>
+</details>
 
 <!-- Analytics -->
 ### :dart: Analytics
