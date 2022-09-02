@@ -12,7 +12,12 @@ app.use('/', routesHandler);
 // so server can parse through incoming json & limit amount per request
 app.use(express.json({limit: '1mb'}));  
 
-const PORT = 4000; // backend routing port
+const PORT = process.env.PORT || 4000; // backend routing port
+
+if (process.env.NODE_ENV == "production") {
+    app.use(express.static('build'));
+}
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });
