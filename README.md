@@ -19,7 +19,7 @@
 <!-- Screenshots -->
 ### :camera: Screenshots
 
-* Link to project 
+* [Deployed Website](https://us-rentals.herokuapp.com)
 
 <div align="center">
  <img src="screenshots/table.jpg" alt="" width="400"/>
