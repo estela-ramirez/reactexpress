@@ -35,7 +35,7 @@ router.get("/data-map", (req, res) => {
 });
 
 //get request for cheapest states
-router.get("/states", (req, res) => {
+router.get("/states-data", (req, res) => {
   console.log("[INFO] Get request recieved at /states");
   var results = states_price_dict;
   // res.json(results);

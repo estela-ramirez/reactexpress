@@ -9,7 +9,7 @@ function DropdownLineChart() {
   const [displayData, setDisplayData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/cities")
+    fetch("/cities")
       .then((response) => response.json())
       .then((json) => {
         // console.log("city names ->", json);
@@ -21,7 +21,7 @@ function DropdownLineChart() {
     setSelectedRegions(Array.isArray(e) ? e.map((x) => x.label) : []);
     const selectedIDs = Array.isArray(e) ? e.map((x) => x.value) : [2];
 
-    fetch("http://localhost:4000/display", {
+    fetch("/display", {
       method: "POST",
       body: JSON.stringify(selectedIDs),
       headers: {

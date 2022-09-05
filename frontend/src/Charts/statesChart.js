@@ -5,7 +5,7 @@ function StatesMap() {
     const [myMap, setMyMap] = useState(new Map());
 
     useEffect(()=>{
-        fetch('http://localhost:4000/states')
+        fetch('/states-data')
         .then(response => response.json())
         .then((json) => { 
             setMyMap(json);

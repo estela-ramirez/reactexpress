@@ -13,12 +13,12 @@ function BarCharts() {
     const [expensiveData, setExpensiveData] = useState({ title: 'Top 10 Expensive cities in 2021', color: 'rgb(250,128,114)', data: [] });
 
     useEffect(() => {
-        fetch('http://localhost:4000/cheap-cities')
+        fetch('/cheap-cities')
             .then(response => response.json())
             .then((json) => {
                 setCheapData({ title: 'Top 10 Cheapet cities in 2021', color: 'rgb(135,206,235)', data: json });
             });
-        fetch('http://localhost:4000/expensive-cities')
+        fetch('/expensive-cities')
         .then(response => response.json())
             .then((json) => {
                 setExpensiveData({ title: 'Top 10 Expensive cities in 2021', color: 'rgb(250,128,114)', data: json });
